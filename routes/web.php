@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MainController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,13 +13,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+// Route::get('/dashboard', [OmodController::class, 'dashboard']);
 
-Route::get('/', function () {
-    return view('login');
-});
-Route::get('/tasks', function() {
-    return view('todo-users');
-});
+Route::get('/', [MainController::class, 'login']);
+Route::get('/tasks', [MainController::class, 'userDashboard'] );
 Route::get('/admin', function() {
     return view('todo-admin');
 });

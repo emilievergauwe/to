@@ -35,7 +35,7 @@ body {
     height: 28px;
     /* UI Properties */
     text-align: left;
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: 0px;
     color: #2d4d73;
     opacity: 1;
@@ -79,4 +79,23 @@ body {
     background: var(--unnamed-color-6d05a1) 0% 0% no-repeat padding-box;
     background: #6d05a1 0% 0% no-repeat padding-box;
     opacity: 1;
+}
+
+.toDoListDiv {
+    /* Layout Properties */
+    top: 171px;
+    left: 395px;
+    width: 800px;
+    height: 500px;
+    /* UI Properties */
+    background: #ffffff 0% 0% no-repeat padding-box;
+    border-radius: 20px;
+    opacity: 1;
+}
+
+.circle {
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    border: 2px solid #c9c9c9;
 }

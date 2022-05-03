@@ -19,15 +19,15 @@
             <h1 class="text-center mainTitle">
             To do list
             </h1>
-            <div class="centerDiv p-4">
+            <div class="centerDiv p-4 shadow-lg">
                 <div class="secondaryTitle mb-3">Login to your account</div>
                 <p class="" style="font-size: 12px">Your e-mail</p>
                 <input class="inputField mb-2" type="email">
                 <p style="font-size: 12px">Password</p>
                 <input class="inputField mb-4" type="password">
                 <div class="d-flex justify-content-between">
-                    <a class="darkBlue" >Forgot password</a>
-                    <button type="submit" class="loginButton rounded-md text-white"><span></span>Login</button>
+                    <a><span class="darkBlue">Forgot password</a>
+                    <button type="submit" class="loginButton rounded-md text-white rounded-lg"><span><i class="fa-solid fa-arrow-right-to-bracket"></i></span>Login</button>
                 </div>
             </div>
         </div>

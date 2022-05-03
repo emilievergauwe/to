@@ -16,26 +16,37 @@
     </head>
     <body class="antialiased d-flex justify-content-center">
         <div>
-            <h1 class="text-center mainTitle">
-            To do list
-            </h1>
+            <div class="mt-4">
+                <div class="d-flex flex-column float-right">
+                    <button type="submit" class="purpleBackground border-0 text-white rounded-lg py-1 px-4 mt-2">Logout</button>
+                    <div class="mt-2 d-flex">
+                        <a href="https://www.flaticon.com/fr/icones-gratuites/masculin" title="masculin icônes">Masculin icônes créées par Freepik - Flaticon</a>
+                        <span>Welcome, Emilie</span>
+                    </div>
+                </div>
+                <h1 class="text-center darkBlue mb-5">
+                To do list
+                </h1>
+            </div>
             <div class="toDoListDiv p-4 shadow-lg">
                 <div class="secondaryTitle mb-3">3 remaining tasks</div>
                 <div>
-                    <div class="border rounded-lg p-2 d-flex align-items-center mb-2">
-                        <div class="circle mr-2"></div>
-                        <div>Task 1</div>
+                    <div class="border rounded-lg mb-2 p-2 d-flex align-items-center">
+                        <div>
+                            <input type="checkbox" class="pt-1"></input>
+                            <label for="task1" class="">Task 1</label>
+                        </div>
                     </div>
-                    <div class="border rounded-lg p-2 d-flex align-items-center mb-2">
-                        <div class="circle mr-2"></div>
-                        <div>Task 2</div>
+                    <div class="border rounded-lg p-2 mb-2">
+                        <input type="checkbox"></input>
+                        <label for="task1" class="">Task 2</label>
                     </div>
-                    <div class="border rounded-lg p-2 d-flex align-items-center mb-2">
-                        <div class="circle mr-2"></div>
-                        <div>Task 3</div>
+                    <div class="border rounded-lg p-2 mb-2">
+                        <input type="checkbox"></input>
+                        <label for="task1" class="">Task 3</label>
                     </div>
                 </div>
-                <div class="secondaryTitle mb-3">Completed tasks</div>
+                <div class="secondaryTitle mb-3 mt-4">Completed tasks</div>
                 <div class="text-secondary">
                     <p class="border rounded-lg p-1 d-flex">Task 1</p>
                     <p class="border rounded-lg p-1 d-flex">Task 2</p>

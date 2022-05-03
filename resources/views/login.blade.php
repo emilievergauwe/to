@@ -27,7 +27,7 @@
                 <input class="inputField mb-4" type="password">
                 <div class="d-flex justify-content-between">
                     <a><span class="darkBlue">Forgot password</a>
-                    <button type="submit" class="loginButton rounded-md text-white rounded-lg"><span><i class="fa-solid fa-arrow-right-to-bracket"></i></span>Login</button>
+                    <button type="submit" class="purpleBackground border-0 text-white py-1 px-4 rounded-lg">Login</button>
                 </div>
             </div>
         </div>

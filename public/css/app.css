@@ -57,6 +57,10 @@ body {
     color: #2d4d73;
 }
 
+.purpleBackground {
+    background: #6d05a1 0% 0% no-repeat padding-box;
+}
+
 .inputField {
     /* Layout Properties */
     top: 528px;
@@ -69,23 +73,11 @@ body {
     opacity: 1;
 }
 
-.loginButton {
-    /* Layout Properties */
-    top: 686px;
-    left: 1060px;
-    width: 109px;
-    height: 44px;
-    /* UI Properties */
-    background: var(--unnamed-color-6d05a1) 0% 0% no-repeat padding-box;
-    background: #6d05a1 0% 0% no-repeat padding-box;
-    opacity: 1;
-}
-
 .toDoListDiv {
     /* Layout Properties */
     top: 171px;
     left: 395px;
-    width: 800px;
+    width: 70vw;
     height: 500px;
     /* UI Properties */
     background: #ffffff 0% 0% no-repeat padding-box;

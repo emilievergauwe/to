@@ -43,7 +43,13 @@
             </div>
             <div class="toDoListDiv p-4 shadow-lg">
                 <div class="secondaryTitle mb-3" style="font: normal normal medium 20px/30px Poppins;">3 remaining tasks</div>
-                    <div class="d-flex align-items-center border rounded-lg py-1 px-3 mb-3">
+                    @foreach($openTasks as $task)
+                        <div class="d-flex align-items-center border rounded-lg py-1 px-3 mb-3">
+                            <input type="checkbox"></input>
+                            <div class="ml-2">{{ $task['info'] }}</div>
+                        </div>
+                    @endforeach
+                    <!-- <div class="d-flex align-items-center border rounded-lg py-1 px-3 mb-3">
                         <input type="checkbox"></input>
                         <div class="ml-2">Task 1</div>
                     </div>
@@ -54,10 +60,19 @@
                     <div class="d-flex align-items-center border rounded-lg py-1 px-3 mb-2">
                         <input type="checkbox"></input>
                         <div class="ml-2">Task 1</div>
-                    </div>
-                <div class="secondaryTitle mb-3 mt-4">Completed tasks</div>
+                    </div> -->
+                <div class="secondaryTitle mb-3 mt-4">Completed tasks</div>          
                 <div class="text-secondary">
-                    <div class="d-flex align-items-center border rounded-lg py-1 px-3 mb-3">
+                    @foreach($closedTasks as $task)
+                        <div class="d-flex align-items-center border rounded-lg py-1 px-3 mb-3">
+                            <svg id="Composant_2_4" data-name="Composant 2 – 4" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
+                                <circle id="Ellipse_1" data-name="Ellipse 1" cx="8.5" cy="8.5" r="8.5" fill="#b3e824"/>
+                                <path id="check-solid" d="M9.815,96.22a.714.714,0,0,1,0,1.012l-5.729,5.729a.714.714,0,0,1-1.012,0L.21,100.1a.716.716,0,1,1,1.013-1.012l2.338,2.356L8.8,96.22a.714.714,0,0,1,1.012,0Z" transform="translate(3.975 -90.608)" fill="#383c3c"/>
+                            </svg>
+                            <div class="ml-2">{{ $task['info'] }} <span class="font-weight-bold" style="font-size : 10px">achieved by {{ $task['achiever'] }}</span></div>
+                        </div>
+                    @endforeach
+                    <!-- <div class="d-flex align-items-center border rounded-lg py-1 px-3 mb-3">
                         <svg id="Composant_2_4" data-name="Composant 2 – 4" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
                             <circle id="Ellipse_1" data-name="Ellipse 1" cx="8.5" cy="8.5" r="8.5" fill="#b3e824"/>
                             <path id="check-solid" d="M9.815,96.22a.714.714,0,0,1,0,1.012l-5.729,5.729a.714.714,0,0,1-1.012,0L.21,100.1a.716.716,0,1,1,1.013-1.012l2.338,2.356L8.8,96.22a.714.714,0,0,1,1.012,0Z" transform="translate(3.975 -90.608)" fill="#383c3c"/>
@@ -77,7 +92,7 @@
                             <path id="check-solid" d="M9.815,96.22a.714.714,0,0,1,0,1.012l-5.729,5.729a.714.714,0,0,1-1.012,0L.21,100.1a.716.716,0,1,1,1.013-1.012l2.338,2.356L8.8,96.22a.714.714,0,0,1,1.012,0Z" transform="translate(3.975 -90.608)" fill="#383c3c"/>
                         </svg>
                         <div class="ml-2">Task 3</div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>

@@ -33,7 +33,7 @@ class MainController extends Controller
         }
 
         return view('todo-users', [
-            'opentasks' => $openTasks,
+            'openTasks' => $openTasks,
             'closedTasks' => $closedTasks
         ]);
     }

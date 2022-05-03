@@ -16,12 +16,17 @@ body {
     height: 55%;
 }
 
-.secondaryTitle {
+.toDoListDiv {
     /* Layout Properties */
-    top: 441px;
-    left: 751px;
-    width: 218px;
-    height: 28px;
+    width: 70vw;
+    height: 500px;
+    /* UI Properties */
+    background: #ffffff 0% 0% no-repeat padding-box;
+    border-radius: 20px;
+    opacity: 1;
+}
+
+.secondaryTitle {
     /* UI Properties */
     text-align: left;
     font-weight: 600;
@@ -40,17 +45,5 @@ body {
 
 .greenBackground {
     background: #b3e824;
-}
-
-.toDoListDiv {
-    /* Layout Properties */
-    top: 171px;
-    left: 395px;
-    width: 70vw;
-    height: 500px;
-    /* UI Properties */
-    background: #ffffff 0% 0% no-repeat padding-box;
-    border-radius: 20px;
-    opacity: 1;
 }
 

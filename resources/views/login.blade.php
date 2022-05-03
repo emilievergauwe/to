@@ -14,19 +14,21 @@
         <!-- Styles -->
       
     </head>
-    <body class="antialiased d-flex justify-content-center">
+    <body class="antialiased d-flex justify-content-center loginMainDiv">
         <div>
-            <div class="mainTitle">
-            To Do List
-            </div>
-            <div>
-                <div class="">Login to your account</div>
-                <label>Your e-mail</label>
-                <input type="email">
-                <label>Password</label>
-                <input type="password">
-                <a>Forgot password</a>
-                <button type="submit"></button>
+            <h1 class="text-center mainTitle">
+            To do list
+            </h1>
+            <div class="centerDiv p-4">
+                <div class="secondaryTitle mb-3">Login to your account</div>
+                <p class="" style="font-size: 12px">Your e-mail</p>
+                <input class="inputField mb-2" type="email">
+                <p style="font-size: 12px">Password</p>
+                <input class="inputField mb-4" type="password">
+                <div class="d-flex justify-content-between">
+                    <a class="darkBlue" >Forgot password</a>
+                    <button type="submit" class="loginButton rounded-md text-white"><span></span>Login</button>
+                </div>
             </div>
         </div>
        

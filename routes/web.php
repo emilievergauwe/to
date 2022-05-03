@@ -19,3 +19,6 @@ Route::get('/', function () {
 Route::get('/tasks', function() {
     return view('todo-users');
 });
+Route::get('/admin', function() {
+    return view('todo-admin');
+});

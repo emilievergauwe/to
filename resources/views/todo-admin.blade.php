@@ -10,7 +10,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
 
 
-        <title>User Task List</title>
+        <title>Admin Task List</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -42,41 +42,78 @@
                 </h1>
             </div>
             <div class="toDoListDiv p-4 shadow-lg">
-                <div class="secondaryTitle mb-3" style="font: normal normal medium 20px/30px Poppins;">3 remaining tasks</div>
-                    <div class="d-flex align-items-center border rounded-lg py-1 px-3 mb-3">
-                        <input type="checkbox"></input>
-                        <div class="ml-2">Task 1</div>
+                <div>
+                    <div class="d-flex justify-content-between align-items-center">                
+                        <div class="secondaryTitle mb-3" style="font: normal normal medium 20px/30px Poppins;">3 remaining tasks</div>
+                        <button type="submit" class="d-flex align-items-center justify-content-between btn btn-sm greenBackground border-0 font-weight-bold rounded-lg mb-3 py-2 px-3">
+                            <span class="mr-2">+ Add New Task</span>
+                        </button>
                     </div>
-                    <div class="d-flex align-items-center border rounded-lg py-1 px-3 mb-3">
-                        <input type="checkbox"></input>
-                        <div class="ml-2">Task 1</div>
+                    <div class="d-flex justify-content-between align-items-center border rounded-lg py-1 px-3 mb-3">
+                        <div class="d-flex align-items-center">
+                            <input type="checkbox"></input>
+                            <div class="ml-2">Task 1</div>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="19" viewBox="0 0 20.554 23.49">
+                            <path id="trash-can-solid" d="M6.2.812A1.467,1.467,0,0,1,7.515,0h5.524a1.467,1.467,0,0,1,1.312.812l.33.657h4.4a1.468,1.468,0,1,1,0,2.936H1.468a1.468,1.468,0,0,1,0-2.936h4.4ZM1.427,5.873H19.086V20.554a2.939,2.939,0,0,1-2.936,2.936H4.363a2.964,2.964,0,0,1-2.936-2.936ZM5.1,9.543V19.82a.764.764,0,0,0,.734.734.711.711,0,0,0,.734-.734V9.543a.711.711,0,0,0-.734-.734A.764.764,0,0,0,5.1,9.543Zm4.4,0V19.82a.764.764,0,0,0,.734.734.746.746,0,0,0,.775-.734V9.543a.746.746,0,0,0-.775-.734A.764.764,0,0,0,9.5,9.543Zm4.446,0V19.82a.734.734,0,0,0,1.468,0V9.543a.734.734,0,0,0-1.468,0Z" fill="red"/>
+                        </svg>
                     </div>
-                    <div class="d-flex align-items-center border rounded-lg py-1 px-3 mb-2">
-                        <input type="checkbox"></input>
-                        <div class="ml-2">Task 1</div>
+                    <div class="d-flex justify-content-between align-items-center border rounded-lg py-1 px-3 mb-3">
+                        <div class="d-flex align-items-center">
+                            <input type="checkbox"></input>
+                            <div class="ml-2">Task 2</div>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="19" viewBox="0 0 20.554 23.49">
+                            <path id="trash-can-solid" d="M6.2.812A1.467,1.467,0,0,1,7.515,0h5.524a1.467,1.467,0,0,1,1.312.812l.33.657h4.4a1.468,1.468,0,1,1,0,2.936H1.468a1.468,1.468,0,0,1,0-2.936h4.4ZM1.427,5.873H19.086V20.554a2.939,2.939,0,0,1-2.936,2.936H4.363a2.964,2.964,0,0,1-2.936-2.936ZM5.1,9.543V19.82a.764.764,0,0,0,.734.734.711.711,0,0,0,.734-.734V9.543a.711.711,0,0,0-.734-.734A.764.764,0,0,0,5.1,9.543Zm4.4,0V19.82a.764.764,0,0,0,.734.734.746.746,0,0,0,.775-.734V9.543a.746.746,0,0,0-.775-.734A.764.764,0,0,0,9.5,9.543Zm4.446,0V19.82a.734.734,0,0,0,1.468,0V9.543a.734.734,0,0,0-1.468,0Z" fill="red"/>
+                        </svg>
                     </div>
+                    <div class="d-flex justify-content-between align-items-center border rounded-lg py-1 px-3 mb-3">
+                        <div class="d-flex align-items-center">
+                            <input type="checkbox"></input>
+                            <div class="ml-2">Task 3</div>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="19" viewBox="0 0 20.554 23.49">
+                            <path id="trash-can-solid" d="M6.2.812A1.467,1.467,0,0,1,7.515,0h5.524a1.467,1.467,0,0,1,1.312.812l.33.657h4.4a1.468,1.468,0,1,1,0,2.936H1.468a1.468,1.468,0,0,1,0-2.936h4.4ZM1.427,5.873H19.086V20.554a2.939,2.939,0,0,1-2.936,2.936H4.363a2.964,2.964,0,0,1-2.936-2.936ZM5.1,9.543V19.82a.764.764,0,0,0,.734.734.711.711,0,0,0,.734-.734V9.543a.711.711,0,0,0-.734-.734A.764.764,0,0,0,5.1,9.543Zm4.4,0V19.82a.764.764,0,0,0,.734.734.746.746,0,0,0,.775-.734V9.543a.746.746,0,0,0-.775-.734A.764.764,0,0,0,9.5,9.543Zm4.446,0V19.82a.734.734,0,0,0,1.468,0V9.543a.734.734,0,0,0-1.468,0Z" fill="red"/>
+                        </svg>
+                    </div>
+                </div> 
                 <div class="secondaryTitle mb-3 mt-4">Completed tasks</div>
                 <div class="text-secondary">
-                    <div class="d-flex align-items-center border rounded-lg py-1 px-3 mb-3">
-                        <svg id="Composant_2_4" data-name="Composant 2 – 4" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
-                            <circle id="Ellipse_1" data-name="Ellipse 1" cx="8.5" cy="8.5" r="8.5" fill="#b3e824"/>
-                            <path id="check-solid" d="M9.815,96.22a.714.714,0,0,1,0,1.012l-5.729,5.729a.714.714,0,0,1-1.012,0L.21,100.1a.716.716,0,1,1,1.013-1.012l2.338,2.356L8.8,96.22a.714.714,0,0,1,1.012,0Z" transform="translate(3.975 -90.608)" fill="#383c3c"/>
+                    <div class="d-flex justify-content-between align-items-center border rounded-lg py-1 px-3 mb-3">
+                        <div class="d-flex align-items-center">
+                            <svg id="Composant_2_4" data-name="Composant 2 – 4" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
+                                <circle id="Ellipse_1" data-name="Ellipse 1" cx="8.5" cy="8.5" r="8.5" fill="#b3e824"/>
+                                <path id="check-solid" d="M9.815,96.22a.714.714,0,0,1,0,1.012l-5.729,5.729a.714.714,0,0,1-1.012,0L.21,100.1a.716.716,0,1,1,1.013-1.012l2.338,2.356L8.8,96.22a.714.714,0,0,1,1.012,0Z" transform="translate(3.975 -90.608)" fill="#383c3c"/>
+                            </svg>
+                            <div class="ml-2">Task 1</div>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="19" viewBox="0 0 20.554 23.49">
+                            <path id="trash-can-solid" d="M6.2.812A1.467,1.467,0,0,1,7.515,0h5.524a1.467,1.467,0,0,1,1.312.812l.33.657h4.4a1.468,1.468,0,1,1,0,2.936H1.468a1.468,1.468,0,0,1,0-2.936h4.4ZM1.427,5.873H19.086V20.554a2.939,2.939,0,0,1-2.936,2.936H4.363a2.964,2.964,0,0,1-2.936-2.936ZM5.1,9.543V19.82a.764.764,0,0,0,.734.734.711.711,0,0,0,.734-.734V9.543a.711.711,0,0,0-.734-.734A.764.764,0,0,0,5.1,9.543Zm4.4,0V19.82a.764.764,0,0,0,.734.734.746.746,0,0,0,.775-.734V9.543a.746.746,0,0,0-.775-.734A.764.764,0,0,0,9.5,9.543Zm4.446,0V19.82a.734.734,0,0,0,1.468,0V9.543a.734.734,0,0,0-1.468,0Z" fill="red"/>
                         </svg>
-                        <div class="ml-2">Task 1</div>
                     </div>
-                    <div class="d-flex align-items-center border rounded-lg py-1 px-3 mb-3">
-                        <svg id="Composant_2_4" data-name="Composant 2 – 4" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
-                            <circle id="Ellipse_1" data-name="Ellipse 1" cx="8.5" cy="8.5" r="8.5" fill="#b3e824"/>
-                            <path id="check-solid" d="M9.815,96.22a.714.714,0,0,1,0,1.012l-5.729,5.729a.714.714,0,0,1-1.012,0L.21,100.1a.716.716,0,1,1,1.013-1.012l2.338,2.356L8.8,96.22a.714.714,0,0,1,1.012,0Z" transform="translate(3.975 -90.608)" fill="#383c3c"/>
+                    <div class="d-flex justify-content-between align-items-center border rounded-lg py-1 px-3 mb-3">
+                        <div class="d-flex align-items-center">
+                            <svg id="Composant_2_4" data-name="Composant 2 – 4" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
+                                <circle id="Ellipse_1" data-name="Ellipse 1" cx="8.5" cy="8.5" r="8.5" fill="#b3e824"/>
+                                <path id="check-solid" d="M9.815,96.22a.714.714,0,0,1,0,1.012l-5.729,5.729a.714.714,0,0,1-1.012,0L.21,100.1a.716.716,0,1,1,1.013-1.012l2.338,2.356L8.8,96.22a.714.714,0,0,1,1.012,0Z" transform="translate(3.975 -90.608)" fill="#383c3c"/>
+                            </svg>
+                            <div class="ml-2">Task 1</div>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="19" viewBox="0 0 20.554 23.49">
+                            <path id="trash-can-solid" d="M6.2.812A1.467,1.467,0,0,1,7.515,0h5.524a1.467,1.467,0,0,1,1.312.812l.33.657h4.4a1.468,1.468,0,1,1,0,2.936H1.468a1.468,1.468,0,0,1,0-2.936h4.4ZM1.427,5.873H19.086V20.554a2.939,2.939,0,0,1-2.936,2.936H4.363a2.964,2.964,0,0,1-2.936-2.936ZM5.1,9.543V19.82a.764.764,0,0,0,.734.734.711.711,0,0,0,.734-.734V9.543a.711.711,0,0,0-.734-.734A.764.764,0,0,0,5.1,9.543Zm4.4,0V19.82a.764.764,0,0,0,.734.734.746.746,0,0,0,.775-.734V9.543a.746.746,0,0,0-.775-.734A.764.764,0,0,0,9.5,9.543Zm4.446,0V19.82a.734.734,0,0,0,1.468,0V9.543a.734.734,0,0,0-1.468,0Z" fill="red"/>
                         </svg>
-                        <div class="ml-2">Task 2</div>
                     </div>
-                    <div class=" d-flex align-items-center border rounded-lg py-1 px-3">
-                        <svg id="Composant_2_4" data-name="Composant 2 – 4" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
-                            <circle id="Ellipse_1" data-name="Ellipse 1" cx="8.5" cy="8.5" r="8.5" fill="#b3e824"/>
-                            <path id="check-solid" d="M9.815,96.22a.714.714,0,0,1,0,1.012l-5.729,5.729a.714.714,0,0,1-1.012,0L.21,100.1a.716.716,0,1,1,1.013-1.012l2.338,2.356L8.8,96.22a.714.714,0,0,1,1.012,0Z" transform="translate(3.975 -90.608)" fill="#383c3c"/>
+                    <div class="d-flex justify-content-between align-items-center border rounded-lg py-1 px-3 mb-3">
+                        <div class="d-flex align-items-center">
+                            <svg id="Composant_2_4" data-name="Composant 2 – 4" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
+                                <circle id="Ellipse_1" data-name="Ellipse 1" cx="8.5" cy="8.5" r="8.5" fill="#b3e824"/>
+                                <path id="check-solid" d="M9.815,96.22a.714.714,0,0,1,0,1.012l-5.729,5.729a.714.714,0,0,1-1.012,0L.21,100.1a.716.716,0,1,1,1.013-1.012l2.338,2.356L8.8,96.22a.714.714,0,0,1,1.012,0Z" transform="translate(3.975 -90.608)" fill="#383c3c"/>
+                            </svg>
+                            <div class="ml-2">Task 1</div>
+                        </div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="19" viewBox="0 0 20.554 23.49">
+                            <path id="trash-can-solid" d="M6.2.812A1.467,1.467,0,0,1,7.515,0h5.524a1.467,1.467,0,0,1,1.312.812l.33.657h4.4a1.468,1.468,0,1,1,0,2.936H1.468a1.468,1.468,0,0,1,0-2.936h4.4ZM1.427,5.873H19.086V20.554a2.939,2.939,0,0,1-2.936,2.936H4.363a2.964,2.964,0,0,1-2.936-2.936ZM5.1,9.543V19.82a.764.764,0,0,0,.734.734.711.711,0,0,0,.734-.734V9.543a.711.711,0,0,0-.734-.734A.764.764,0,0,0,5.1,9.543Zm4.4,0V19.82a.764.764,0,0,0,.734.734.746.746,0,0,0,.775-.734V9.543a.746.746,0,0,0-.775-.734A.764.764,0,0,0,9.5,9.543Zm4.446,0V19.82a.734.734,0,0,0,1.468,0V9.543a.734.734,0,0,0-1.468,0Z" fill="red"/>
                         </svg>
-                        <div class="ml-2">Task 3</div>
                     </div>
                 </div>
             </div>

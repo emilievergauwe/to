@@ -38,6 +38,10 @@ body {
     background: #6d05a1 0% 0% no-repeat padding-box;
 }
 
+.greenBackground {
+    background: #b3e824;
+}
+
 .toDoListDiv {
     /* Layout Properties */
     top: 171px;

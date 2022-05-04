@@ -17,7 +17,7 @@ use App\Http\Controllers\MainController;
 
 Route::get('/', [MainController::class, 'login']);
 Route::get('/tasks', [MainController::class, 'userDashboard'] );
+Route::get('/admin', [MainController::class, 'adminDashboard'] );
+
 Route::post('update-task', [MainController::class, 'updateTask'] );
-Route::get('/admin', function() {
-    return view('todo-admin');
-});
+

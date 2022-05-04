@@ -199,22 +199,4 @@ function deleteTask(selectedTask) {
             console.log(error);
         });
 }
-
-// function deleteClonedTask(selectedTask) {
-//      // Remove deleted task from list
-//      var taskToRemove = document.getElementById(selectedTask);
-//     taskToRemove.remove(); 
-
-//     // Remove deleted task from database
-//     axios.post(`delete-task`, {
-//             selectedTask: selectedTask,
-//         })
-//         .then((response) => {
-//             var data = response.data
-//             console.log(data);
-//         })
-//         .catch(error => {
-//             console.log(error);
-//         });
-// }
 </script>

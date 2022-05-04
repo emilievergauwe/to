@@ -56,30 +56,37 @@
                                 <input type="checkbox" id="task" value="{{ $task['id'] }}" onclick="onClickHandler({{ $task['id'] }})"></input>
                                 <div class="ml-2">{{ $task['info'] }}</div>
                             </div>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="19" viewBox="0 0 20.554 23.49">
-                                <path id="trash-can-solid" d="M6.2.812A1.467,1.467,0,0,1,7.515,0h5.524a1.467,1.467,0,0,1,1.312.812l.33.657h4.4a1.468,1.468,0,1,1,0,2.936H1.468a1.468,1.468,0,0,1,0-2.936h4.4ZM1.427,5.873H19.086V20.554a2.939,2.939,0,0,1-2.936,2.936H4.363a2.964,2.964,0,0,1-2.936-2.936ZM5.1,9.543V19.82a.764.764,0,0,0,.734.734.711.711,0,0,0,.734-.734V9.543a.711.711,0,0,0-.734-.734A.764.764,0,0,0,5.1,9.543Zm4.4,0V19.82a.764.764,0,0,0,.734.734.746.746,0,0,0,.775-.734V9.543a.746.746,0,0,0-.775-.734A.764.764,0,0,0,9.5,9.543Zm4.446,0V19.82a.734.734,0,0,0,1.468,0V9.543a.734.734,0,0,0-1.468,0Z" fill="red"/>
-                            </svg>
+                            <div style="cursor : pointer" onclick="deleteTask({{ $task['id'] }})">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="19" viewBox="0 0 20.554 23.49">
+                                    <path id="trash-can-solid" d="M6.2.812A1.467,1.467,0,0,1,7.515,0h5.524a1.467,1.467,0,0,1,1.312.812l.33.657h4.4a1.468,1.468,0,1,1,0,2.936H1.468a1.468,1.468,0,0,1,0-2.936h4.4ZM1.427,5.873H19.086V20.554a2.939,2.939,0,0,1-2.936,2.936H4.363a2.964,2.964,0,0,1-2.936-2.936ZM5.1,9.543V19.82a.764.764,0,0,0,.734.734.711.711,0,0,0,.734-.734V9.543a.711.711,0,0,0-.734-.734A.764.764,0,0,0,5.1,9.543Zm4.4,0V19.82a.764.764,0,0,0,.734.734.746.746,0,0,0,.775-.734V9.543a.746.746,0,0,0-.775-.734A.764.764,0,0,0,9.5,9.543Zm4.446,0V19.82a.734.734,0,0,0,1.468,0V9.543a.734.734,0,0,0-1.468,0Z" fill="red"/>
+                                </svg>
+                            </div>
                         </div>
                     @endforeach
                 </div> 
                 <div class="secondaryTitle mb-3 mt-4">Completed tasks</div>
                 <div class="text-secondary">  
-                    <div id="completedTask" class="d-none justify-content-between align-items-center border rounded-lg py-1 px-3 mb-3">
-                        <div class="d-flex align-items-center">
-                            <svg id="Composant_2_4" data-name="Composant 2 – 4" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
-                                <circle id="Ellipse_1" data-name="Ellipse 1" cx="8.5" cy="8.5" r="8.5" fill="#b3e824"/>
-                                <path id="check-solid" d="M9.815,96.22a.714.714,0,0,1,0,1.012l-5.729,5.729a.714.714,0,0,1-1.012,0L.21,100.1a.716.716,0,1,1,1.013-1.012l2.338,2.356L8.8,96.22a.714.714,0,0,1,1.012,0Z" transform="translate(3.975 -90.608)" fill="#383c3c"/>
-                            </svg>
+                    <div id="{{ $task['id'] }}">
+                        <div id="completedTask" class="d-none justify-content-between align-items-center border rounded-lg py-1 px-3 mb-3">
                             <div class="d-flex align-items-center">
-                                <div class="mx-2 "></div>
-                                <div class="font-weight-bold" style="font-size : 10px"></div>
+                                <svg id="Composant_2_4" data-name="Composant 2 – 4" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
+                                    <circle id="Ellipse_1" data-name="Ellipse 1" cx="8.5" cy="8.5" r="8.5" fill="#b3e824"/>
+                                    <path id="check-solid" d="M9.815,96.22a.714.714,0,0,1,0,1.012l-5.729,5.729a.714.714,0,0,1-1.012,0L.21,100.1a.716.716,0,1,1,1.013-1.012l2.338,2.356L8.8,96.22a.714.714,0,0,1,1.012,0Z" transform="translate(3.975 -90.608)" fill="#383c3c"/>
+                                </svg>
+                                <div class="d-flex align-items-center">
+                                    <div class="mx-2 "></div>
+                                    <div class="font-weight-bold" style="font-size : 10px"></div>
+                                </div>
+                            </div>
+                            <div style="cursor : pointer" onclick="deleteTask({{ $task['id'] }})">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="19" viewBox="0 0 20.554 23.49">
+                                    <path id="trash-can-solid" d="M6.2.812A1.467,1.467,0,0,1,7.515,0h5.524a1.467,1.467,0,0,1,1.312.812l.33.657h4.4a1.468,1.468,0,1,1,0,2.936H1.468a1.468,1.468,0,0,1,0-2.936h4.4ZM1.427,5.873H19.086V20.554a2.939,2.939,0,0,1-2.936,2.936H4.363a2.964,2.964,0,0,1-2.936-2.936ZM5.1,9.543V19.82a.764.764,0,0,0,.734.734.711.711,0,0,0,.734-.734V9.543a.711.711,0,0,0-.734-.734A.764.764,0,0,0,5.1,9.543Zm4.4,0V19.82a.764.764,0,0,0,.734.734.746.746,0,0,0,.775-.734V9.543a.746.746,0,0,0-.775-.734A.764.764,0,0,0,9.5,9.543Zm4.446,0V19.82a.734.734,0,0,0,1.468,0V9.543a.734.734,0,0,0-1.468,0Z" fill="red"/>
+                                </svg>
                             </div>
                         </div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="19" viewBox="0 0 20.554 23.49">
-                            <path id="trash-can-solid" d="M6.2.812A1.467,1.467,0,0,1,7.515,0h5.524a1.467,1.467,0,0,1,1.312.812l.33.657h4.4a1.468,1.468,0,1,1,0,2.936H1.468a1.468,1.468,0,0,1,0-2.936h4.4ZM1.427,5.873H19.086V20.554a2.939,2.939,0,0,1-2.936,2.936H4.363a2.964,2.964,0,0,1-2.936-2.936ZM5.1,9.543V19.82a.764.764,0,0,0,.734.734.711.711,0,0,0,.734-.734V9.543a.711.711,0,0,0-.734-.734A.764.764,0,0,0,5.1,9.543Zm4.4,0V19.82a.764.764,0,0,0,.734.734.746.746,0,0,0,.775-.734V9.543a.746.746,0,0,0-.775-.734A.764.764,0,0,0,9.5,9.543Zm4.446,0V19.82a.734.734,0,0,0,1.468,0V9.543a.734.734,0,0,0-1.468,0Z" fill="red"/>
-                        </svg>
                     </div>
                     @foreach($closedTasks as $task)
+                    <div id="{{ $task['id'] }}">
                         <div class="d-flex justify-content-between align-items-center border rounded-lg py-1 px-3 mb-3">
                             <div class="d-flex align-items-center">
                                 <svg id="Composant_2_4" data-name="Composant 2 – 4" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
@@ -91,10 +98,13 @@
                                     <div class="font-weight-bold" style="font-size : 10px">completed by {{ $task['achiever'] }}</div>
                                 </div>
                             </div>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="19" viewBox="0 0 20.554 23.49">
-                                <path id="trash-can-solid" d="M6.2.812A1.467,1.467,0,0,1,7.515,0h5.524a1.467,1.467,0,0,1,1.312.812l.33.657h4.4a1.468,1.468,0,1,1,0,2.936H1.468a1.468,1.468,0,0,1,0-2.936h4.4ZM1.427,5.873H19.086V20.554a2.939,2.939,0,0,1-2.936,2.936H4.363a2.964,2.964,0,0,1-2.936-2.936ZM5.1,9.543V19.82a.764.764,0,0,0,.734.734.711.711,0,0,0,.734-.734V9.543a.711.711,0,0,0-.734-.734A.764.764,0,0,0,5.1,9.543Zm4.4,0V19.82a.764.764,0,0,0,.734.734.746.746,0,0,0,.775-.734V9.543a.746.746,0,0,0-.775-.734A.764.764,0,0,0,9.5,9.543Zm4.446,0V19.82a.734.734,0,0,0,1.468,0V9.543a.734.734,0,0,0-1.468,0Z" fill="red"/>
-                            </svg>
+                            <div style="cursor : pointer" onclick="deleteTask({{ $task['id'] }})">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="19" viewBox="0 0 20.554 23.49">
+                                    <path id="trash-can-solid" d="M6.2.812A1.467,1.467,0,0,1,7.515,0h5.524a1.467,1.467,0,0,1,1.312.812l.33.657h4.4a1.468,1.468,0,1,1,0,2.936H1.468a1.468,1.468,0,0,1,0-2.936h4.4ZM1.427,5.873H19.086V20.554a2.939,2.939,0,0,1-2.936,2.936H4.363a2.964,2.964,0,0,1-2.936-2.936ZM5.1,9.543V19.82a.764.764,0,0,0,.734.734.711.711,0,0,0,.734-.734V9.543a.711.711,0,0,0-.734-.734A.764.764,0,0,0,5.1,9.543Zm4.4,0V19.82a.764.764,0,0,0,.734.734.746.746,0,0,0,.775-.734V9.543a.746.746,0,0,0-.775-.734A.764.764,0,0,0,9.5,9.543Zm4.446,0V19.82a.734.734,0,0,0,1.468,0V9.543a.734.734,0,0,0-1.468,0Z" fill="red"/>
+                                </svg>
+                            </div>
                         </div>
+                    </div>
                     @endforeach  
                 </div>
             </div>
@@ -145,8 +155,8 @@ function onClickHandler(value){
         });
 
     // remove checked item from open tasks
-    const element = document.getElementById(selectedTask);
-    element.remove(); 
+    var taskToRemove = document.getElementById(selectedTask);
+    taskToRemove.remove(); 
 
     // Add completed task to completed task list
     // clone existing hidden completed task div model and render it visible
@@ -165,5 +175,11 @@ function onClickHandler(value){
     infoDiv.textContent = selectedTaskInfo;
     achieverDiv.textContent = 'completed by ' + selectedTaskAchiever;
     elem.before(clone);
+}
+
+function deleteTask(selectedTask) {
+    // Remove corresponding task in list
+    var taskToRemove = document.getElementById(selectedTask);
+    taskToRemove.remove(); 
 }
 </script>

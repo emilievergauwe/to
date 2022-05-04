@@ -34,7 +34,7 @@
                                 <path id="user-hair-long-solid" d="M4.166,5.555a5.555,5.555,0,0,1,11.11,0v.438A5.582,5.582,0,0,0,16.9,9.96l.169.169a.982.982,0,0,1-.694,1.675H3.065a.957.957,0,0,1-.694-1.675l.168-.169A5.546,5.546,0,0,0,4.127,5.994ZM12.9,4.166h-.056A2.77,2.77,0,0,1,10.659,3.1,3.469,3.469,0,0,1,7.638,4.861H6.319a3.658,3.658,0,0,0-.069.694V6.25a3.472,3.472,0,0,0,6.944,0V5.555A3.445,3.445,0,0,0,12.9,4.166Zm-.46,9.722a7,7,0,0,1,7,7,1.335,1.335,0,0,1-1.332,1.332H1.333A1.334,1.334,0,0,1,0,20.888a7,7,0,0,1,7-7Z" fill="#2d4d73"/>
                             </svg>
                         </span>
-                        <span class="ml-2 mt-1 font-weight-bold" style="font-size : 12px; color : #2d4d73">Welcome, Emilie</span>
+                        <span class="ml-2 mt-1 font-weight-bold" style="font-size : 12px; color : #2d4d73">Welcome, {{ $user }}</span>
                     </div>
                 </div>
                 <h1 class="text-center darkBlue mb-5" style="font-family: 'Poppins', sans-serif;">
@@ -42,27 +42,53 @@
                 </h1>
             </div>
             <div class="toDoListDiv p-4 shadow-lg">
-                <div class="secondaryTitle mb-3" style="font: normal normal medium 20px/30px Poppins;">3 remaining tasks</div>
+                <div class="secondaryTitle mb-3" style="font: normal normal medium 20px/30px Poppins;">{{ sizeof($openTasks) }} remaining tasks</div>
                     @foreach($openTasks as $task)
-                        <div class="d-flex align-items-center border rounded-lg py-1 px-3 mb-3">
-                            <input type="checkbox"></input>
+                        <div  id="{{ $task['id'] }}" class="d-flex align-items-center border rounded-lg py-1 px-3 mb-3">
+                            <input type="checkbox" id="task" value="{{ $task['id'] }}" onclick="onClickHandler({{ $task['id'] }})"></input>
                             <div class="ml-2">{{ $task['info'] }}</div>
                         </div>
                     @endforeach
                 <div class="secondaryTitle mb-3 mt-4">Completed tasks</div>          
                 <div class="text-secondary">
-                    @foreach($closedTasks as $task)
-                        <div class="d-flex align-items-center border rounded-lg py-1 px-3 mb-3">
-                            <svg id="Composant_2_4" data-name="Composant 2 – 4" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
-                                <circle id="Ellipse_1" data-name="Ellipse 1" cx="8.5" cy="8.5" r="8.5" fill="#b3e824"/>
-                                <path id="check-solid" d="M9.815,96.22a.714.714,0,0,1,0,1.012l-5.729,5.729a.714.714,0,0,1-1.012,0L.21,100.1a.716.716,0,1,1,1.013-1.012l2.338,2.356L8.8,96.22a.714.714,0,0,1,1.012,0Z" transform="translate(3.975 -90.608)" fill="#383c3c"/>
-                            </svg>
-                            <div class="ml-2">{{ $task['info'] }} <span class="font-weight-bold" style="font-size : 10px">achieved by {{ $task['achiever'] }}</span></div>
-                        </div>
-                    @endforeach
+                    <table id="completedTasks">
+                        <tbody>
+                            @foreach($closedTasks as $task)
+                            <tr>
+                                <td class="d-flex align-items-center border rounded-lg py-1 px-3 mb-3">
+                                    <svg id="Composant_2_4" data-name="Composant 2 – 4" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
+                                        <circle id="Ellipse_1" data-name="Ellipse 1" cx="8.5" cy="8.5" r="8.5" fill="#b3e824"/>
+                                        <path id="check-solid" d="M9.815,96.22a.714.714,0,0,1,0,1.012l-5.729,5.729a.714.714,0,0,1-1.012,0L.21,100.1a.716.716,0,1,1,1.013-1.012l2.338,2.356L8.8,96.22a.714.714,0,0,1,1.012,0Z" transform="translate(3.975 -90.608)" fill="#383c3c"/>
+                                    </svg>
+                                    <div class="ml-2">{{ $task['info'] }} <span class="font-weight-bold" style="font-size : 10px">achieved by {{ $task['achiever'] }}</span></div>
+                                </td>
+                            </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
-       
     </body>
 </html>
+<script>
+// Create JS variable for all company tasks
+var tasks = {!! json_encode($tasks, JSON_HEX_TAG) !!};
+var user = {!! json_encode($user, JSON_HEX_TAG) !!};
+
+// get selected task and change status and achiever.
+function onClickHandler(value){
+    var selectedTask = value;
+    console.log(selectedTask);
+    tasks.forEach((element) => {
+        if(element.id == selectedTask) {
+            element.status = 'closed';
+            element.achiever = user;
+        }
+    })
+    console.log(tasks);
+    const element = document.getElementById(selectedTask);
+    element.remove(); // Removes the div with the 'div-02' id
+
+}
+</script>

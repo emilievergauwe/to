@@ -41,8 +41,12 @@ class MainController extends Controller
     }
 
     public function updateTask(Request $request) {
+
+        # update database tasks table
         $selectedTask = $request->input('selectedTask');
         $selectedTaskAchiever = $request->input('selectedTaskAchiever');
+        $query1 = DB::update('update tasks SET achiever=?, status="closed" WHERE id=? ', [$selectedTaskAchiever, $selectedTask]);
+        // $query2 = DB::update('update tasks SET status = "closed" WHERE id=?', [$selectedTask]);
     
         print(json_encode('coucou'));
     }

@@ -99,13 +99,14 @@ function onClickHandler(value){
         }
     })
 
+    // update database via axios post
     axios.post(`update-task`, {
             selectedTask: selectedTask,
             selectedTaskAchiever: selectedTaskAchiever,
         })
         .then((response) => {
-            var test = response.data
-            console.log(test);
+            var data = response.data
+            console.log(data);
         })
         .catch(error => {
             console.log(error);

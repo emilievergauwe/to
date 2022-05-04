@@ -41,7 +41,7 @@ class MainController extends Controller
     }
 
     public function adminDashboard() {
-        // $query1 = DB::update('update tasks SET achiever="none", status="open" WHERE id= "2" ',);
+        $query1 = DB::update('update tasks SET achiever="none", status="open" WHERE id= "14" ',);
 
         $company = "Aexavet";
         $user = "Franck";
@@ -76,8 +76,14 @@ class MainController extends Controller
         # update database tasks table
         $selectedTask = $request->input('selectedTask');
         $selectedTaskAchiever = $request->input('selectedTaskAchiever');
-        $query1 = DB::update('update tasks SET achiever=?, status="closed" WHERE id=? ', [$selectedTaskAchiever, $selectedTask]);
+        $query = DB::update('update tasks SET achiever=?, status="closed" WHERE id=? ', [$selectedTaskAchiever, $selectedTask]);
     
         print(json_encode('coucou'));
+    }
+
+    public function deleteTask(Request $request) {
+        $selectedTask = $request->input('selectedTask');
+        $query = DB::delete('delete from tasks WHERE id=? ', [$selectedTask]);
+
     }
 }

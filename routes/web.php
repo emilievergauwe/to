@@ -20,4 +20,6 @@ Route::get('/tasks', [MainController::class, 'userDashboard'] );
 Route::get('/admin', [MainController::class, 'adminDashboard'] );
 
 Route::post('update-task', [MainController::class, 'updateTask'] );
+Route::post('delete-task', [MainController::class, 'deleteTask'] );
+
 

@@ -59,7 +59,7 @@
                             </svg>
                             <div class="d-flex align-items-center">
                                 <div class="mx-2 ">{{ $task['info'] }}</div>
-                                <div class="font-weight-bold" style="font-size : 10px">achieved by {{ $task['achiever'] }}</div>
+                                <div class="font-weight-bold" style="font-size : 10px">completed by {{ $task['achiever'] }}</div>
                             </div>
                         </div>
                     @endforeach    

@@ -41,6 +41,8 @@ class MainController extends Controller
     }
 
     public function adminDashboard() {
+        // $query1 = DB::update('update tasks SET achiever="none", status="open" WHERE id= "2" ',);
+
         $company = "Aexavet";
         $user = "Franck";
 

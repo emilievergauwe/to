@@ -78,8 +78,8 @@
         </div>
     </body>
 </html>
-<script>
 
+<script>
 // Create JS variable for all company tasks, current user and open tasks
 var tasks = {!! json_encode($tasks, JSON_HEX_TAG) !!};
 var user = {!! json_encode($user, JSON_HEX_TAG) !!};
@@ -141,6 +141,5 @@ function onClickHandler(value){
     infoDiv.textContent = selectedTaskInfo;
     achieverDiv.textContent = 'completed by ' + selectedTaskAchiever;
     elem.before(clone);
-
 }
 </script>

@@ -12,11 +12,11 @@ class MainController extends Controller
     }
 
     public function userDashboard() {
-        $company = "ScenoPhoto";
-        $user = "Emil";
+        $company = "Hope";
+        $user = "Pascal";
 
         # Query database to get all current company tasks
-        $companyTasks = DB::select('select * from tasks where company = "ScenoPhoto"');
+        $companyTasks = DB::select('select * from tasks where company=?', [$company]);
 
         # Convert tasks object to array
         $tasks = json_decode(json_encode($companyTasks), true);
@@ -46,7 +46,6 @@ class MainController extends Controller
         $selectedTask = $request->input('selectedTask');
         $selectedTaskAchiever = $request->input('selectedTaskAchiever');
         $query1 = DB::update('update tasks SET achiever=?, status="closed" WHERE id=? ', [$selectedTaskAchiever, $selectedTask]);
-        // $query2 = DB::update('update tasks SET status = "closed" WHERE id=?', [$selectedTask]);
     
         print(json_encode('coucou'));
     }

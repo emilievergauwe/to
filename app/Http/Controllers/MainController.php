@@ -39,4 +39,11 @@ class MainController extends Controller
             'user' => $user
         ]);
     }
+
+    public function updateTask(Request $request) {
+        $selectedTask = $request->input('selectedTask');
+        $selectedTaskAchiever = $request->input('selectedTaskAchiever');
+    
+        print(json_encode('coucou'));
+    }
 }

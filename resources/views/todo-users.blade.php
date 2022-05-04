@@ -8,7 +8,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
-
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
         <title>User Task List</title>
 
@@ -69,6 +69,7 @@
     </body>
 </html>
 <script>
+
 // Create JS variable for all company tasks, current user and open tasks
 var tasks = {!! json_encode($tasks, JSON_HEX_TAG) !!};
 var user = {!! json_encode($user, JSON_HEX_TAG) !!};
@@ -98,6 +99,18 @@ function onClickHandler(value){
         }
     })
 
+    axios.post(`update-task`, {
+            selectedTask: selectedTask,
+            selectedTaskAchiever: selectedTaskAchiever,
+        })
+        .then((response) => {
+            var test = response.data
+            console.log(test);
+        })
+        .catch(error => {
+            console.log(error);
+        });
+
     // remove checked item from open tasks
     const element = document.getElementById(selectedTask);
     element.remove(); 
@@ -111,8 +124,6 @@ function onClickHandler(value){
     var achieverDiv = infoDivMain.children[1];
     infoDiv.textContent = selectedTaskInfo;
     achieverDiv.textContent = 'completed by ' + selectedTaskAchiever;
-
-
     elem.before(clone);
 
 }

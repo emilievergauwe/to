@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\DB;
 class MainController extends Controller
 {
     public function login() {
-        return view('login');
+        return redirect('/login');
     }
 
     public function userDashboard() {

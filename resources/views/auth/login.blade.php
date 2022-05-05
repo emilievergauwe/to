@@ -39,13 +39,14 @@
                                 </svg>
                                 <span class="ml-3">Login</span>
                             </button>
-                            <a class="btn btn-link" href="{{ route('password.request') }}">
-                                Forgot your password ?
-                            </a>
-                            <a class="btn btn-link" href="{{ route('register') }}">
-                                Register
-                            </a>
+                           
                         </div>
+                        <a class="btn btn-link" href="{{ route('password.request') }}">
+                                Forgot your password ?
+                        </a>
+                        <a class="btn btn-link" href="{{ route('register') }}">
+                            Register
+                        </a>
                     </form>
                 </div>
             </div>

@@ -23,3 +23,7 @@ Route::post('update-task', [MainController::class, 'updateTask'] );
 Route::post('delete-task', [MainController::class, 'deleteTask'] );
 
 
+
+Auth::routes();
+
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

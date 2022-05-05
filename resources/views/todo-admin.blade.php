@@ -47,7 +47,7 @@
                     <div class="d-flex justify-content-between align-items-center">                
                         <div id="openTasksCount" class="secondaryTitle mb-3" style="font: normal normal medium 20px/30px Poppins;">{{ sizeof($openTasks) }} remaining tasks</div>
                         <button type="submit" class="d-flex align-items-center justify-content-between btn btn-sm greenBackground border-0 font-weight-bold rounded-lg mb-3 py-2 px-3">
-                            <span class="mr-2">+ Add New Task</span>
+                            <span class="mr-2" onclick="createNewTask()">+ Add New Task</span>
                         </button>
                     </div>
                     @foreach($openTasks as $task)
